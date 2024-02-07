@@ -8,7 +8,7 @@ type RootLayoutProps = Readonly<{ children: React.ReactNode }>;
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Home',
+  title: 'Next React Playground',
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
