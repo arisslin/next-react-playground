@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
+import TopNavigation from '@/components/TopNavigation';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,19 +19,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <header>
-          <nav>
-            <ul>
-              <li>
-                <Link href={'/'}>Home</Link>
-              </li>
-              <li>
-                <Link href={'/next'}>Next</Link>
-              </li>
-              <li>
-                <Link href={'/react'}>React</Link>
-              </li>
-            </ul>
-          </nav>
+          <TopNavigation />
         </header>
         <main>{children}</main>
       </body>
