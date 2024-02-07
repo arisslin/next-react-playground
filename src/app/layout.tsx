@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Link from 'next/link';
 import TopNavigation from '@/components/TopNavigation';
+
+type RootLayoutProps = Readonly<{ children: React.ReactNode }>;
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -10,11 +11,7 @@ export const metadata: Metadata = {
   title: 'Home',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='en'>
       <body className={inter.className}>
