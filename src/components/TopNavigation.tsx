@@ -4,18 +4,14 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
-type TopNavLink = Readonly<{
+export type TopNavLink = Readonly<{
   href: string;
   children: React.ReactNode;
 }>;
 
-const links: TopNavLink[] = [
-  { href: '/', children: 'Home' },
-  { href: '/next', children: 'Next' },
-  { href: '/react', children: 'React' },
-];
+type TopNavigationProps = Readonly<{ links: TopNavLink[] }>;
 
-export function TopNavigation() {
+export function TopNavigation({ links }: TopNavigationProps): JSX.Element {
   return (
     <nav className='border-b border-gray-200 bg-gray-50 px-4 py-2 text-gray-950'>
       <ul className='flex gap-4'>
