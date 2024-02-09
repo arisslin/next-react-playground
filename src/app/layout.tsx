@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import TopNavigation from '@/components/TopNavigation';
+import { TopNavigation } from '@/components/TopNavigation';
 
 type RootLayoutProps = Readonly<{ children: React.ReactNode }>;
 
