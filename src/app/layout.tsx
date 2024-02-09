@@ -1,7 +1,8 @@
+import { TopNavigation } from '@/components/TopNavigation';
+import { NavLink } from '@/types';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { TopNavLink, TopNavigation } from '@/components/TopNavigation';
 
 type RootLayoutProps = Readonly<{ children: React.ReactNode }>;
 
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: 'Next React Playground',
 };
 
-export const topNavLinks: TopNavLink[] = [
+const topNavLinks: NavLink[] = [
   { href: '/', children: 'Home' },
   { href: '/next', children: 'Next' },
   { href: '/react', children: 'React' },

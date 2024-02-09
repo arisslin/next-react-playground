@@ -1,17 +1,13 @@
 'use client';
 
+import { NavLink } from '@/types';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
-export type TopNavLink = Readonly<{
-  href: string;
-  children: React.ReactNode;
-}>;
-
-type TopNavigationProps = Readonly<{ links: TopNavLink[] }>;
-
-export function TopNavigation({ links }: TopNavigationProps): JSX.Element {
+export function TopNavigation({
+  links,
+}: Readonly<{ links: NavLink[] }>): JSX.Element {
   return (
     <nav className='border-b border-gray-200 bg-gray-50 px-4 py-2 text-gray-950'>
       <ul className='flex gap-4'>
@@ -25,7 +21,7 @@ export function TopNavigation({ links }: TopNavigationProps): JSX.Element {
   );
 }
 
-function Item({ href, children }: TopNavLink): JSX.Element {
+function Item({ href, children }: Readonly<NavLink>): JSX.Element {
   const pathname = usePathname();
   const activeClassName =
     pathname === href
