@@ -4,19 +4,23 @@ import { NavLink } from '@/types';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
+import { ToggleSwitch } from './ToggleSwitch';
 
 export function TopNavigation({
   links,
 }: Readonly<{ links: NavLink[] }>): JSX.Element {
   return (
     <nav className='border-b border-gray-200 bg-gray-50 px-4 py-2 text-gray-950'>
-      <ul className='mx-auto flex max-w-screen-lg gap-4'>
-        {links.map((link) => (
-          <Item key={link.href} href={link.href}>
-            {link.children}
-          </Item>
-        ))}
-      </ul>
+      <div className='mx-auto flex max-w-screen-lg flex-nowrap justify-between'>
+        <ul className='flex gap-4'>
+          {links.map((link) => (
+            <Item key={link.href} href={link.href}>
+              {link.children}
+            </Item>
+          ))}
+        </ul>
+        <ToggleSwitch></ToggleSwitch>
+      </div>
     </nav>
   );
 }
