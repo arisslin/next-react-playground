@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 import { ToggleSwitch } from './ToggleSwitch';
-import { DarkModeIcon } from '@/app/icons/DarkModeIcon';
+import { DarkModeIcon } from './icons/DarkModeIcon';
 
 export function TopNavigation({
   links,
