@@ -14,7 +14,7 @@ export function ToggleSwitch({ children, onClick }: ToggleSwitchProps) {
       />
       <div
         data-before=''
-        className='relative h-6 w-10 rounded-full bg-slate-400 duration-500 before:absolute before:bottom-0.5 before:left-0.5 before:h-5 before:w-5 before:rounded-full before:bg-slate-50 before:duration-500 before:content-[attr(data-before)] peer-checked:bg-sky-600 peer-checked:before:translate-x-4'
+        className='relative h-6 w-10 rounded-full bg-slate-400 duration-500 before:absolute before:bottom-0.5 before:left-0.5 before:h-5 before:w-5 before:rounded-full before:bg-slate-50 before:duration-500 before:content-[attr(data-before)] peer-checked:bg-sky-500 peer-checked:before:translate-x-4'
       />
     </label>
   );
