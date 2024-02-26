@@ -21,13 +21,11 @@ const topNavLinks: NavLink[] = [
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='en'>
-      <body
-        className={`${inter.className} flex min-h-screen flex-col items-stretch bg-gray-50  dark:bg-slate-600`}
-      >
+      <body className={`${inter.className} bg-gray-50 dark:bg-slate-600`}>
         <header>
           <TopNavigation links={topNavLinks} />
         </header>
-        <main className='text-gray-950 dark:text-gray-50 '>{children}</main>
+        <main className='text-gray-950 dark:text-gray-50'>{children}</main>
       </body>
     </html>
   );
