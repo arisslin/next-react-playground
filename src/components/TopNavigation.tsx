@@ -10,8 +10,8 @@ export function TopNavigation({
   links,
 }: Readonly<{ links: NavLink[] }>): JSX.Element {
   return (
-    <nav className='border-b border-gray-200 bg-gray-50 px-4 py-2 text-gray-950 dark:border-gray-600 dark:bg-slate-800 dark:text-gray-50'>
-      <div className='mx-auto flex max-w-screen-lg flex-nowrap justify-between'>
+    <nav className='border-b border-gray-200 bg-gray-50 text-gray-950 dark:border-gray-600 dark:bg-slate-800 dark:text-gray-50'>
+      <div className='mx-auto flex max-w-screen-lg flex-nowrap justify-between px-4 py-2'>
         <ul className='flex gap-4'>
           {links.map((link) => (
             <Item key={link.href} href={link.href}>
