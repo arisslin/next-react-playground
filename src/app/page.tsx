@@ -23,7 +23,7 @@ export default function Home() {
         This website i use for learning Next.js in combination with some other
         web technologies.
       </Paragraph>
-      <ul className='container grid flex-col flex-wrap gap-4 sm:grid-cols-2'>
+      <ul className='container mt-6 grid flex-col flex-wrap gap-4 sm:grid-cols-2'>
         {cardLinks.map((props) => (
           <li key={props.href} className='*:h-full'>
             <CardLink {...props} />
