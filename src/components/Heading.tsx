@@ -11,7 +11,10 @@ export default function Heading({
 
   const headings = {
     1: (
-      <h1 className={`${commonClassName} my-9 text-4xl md:my-12 md:text-5xl`}>
+      <h1
+        data-after=''
+        className={`${commonClassName} my-9 text-4xl after:mt-2 after:block after:h-px after:w-full after:bg-gray-300 after:content-[attr(data-after)] dark:after:bg-slate-500 md:my-12 md:text-5xl `}
+      >
         {children}
       </h1>
     ),
