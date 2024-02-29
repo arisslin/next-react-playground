@@ -1,51 +1,35 @@
 import Heading from '@/components/Heading';
 import Paragraph from '@/components/Paragraph';
+import { CardLink, CardLinkProps } from '@/components/CardLink';
+
+const cardLinks: CardLinkProps[] = [
+  {
+    href: '/next',
+    title: 'Next.js',
+    subtext: 'Here you find some Next.js examples.',
+  },
+  {
+    href: '/react',
+    title: 'React.js',
+    subtext: 'Here you find some React.js examples.',
+  },
+];
 
 export default function Home() {
   return (
     <>
-      <Heading order={1}>Heading 1 order</Heading>
+      <Heading order={1}>Next React Playground</Heading>
       <Paragraph>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem autem
-        odio, quaerat non eos beatae laudantium totam sequi repellat obcaecati
-        molestias quidem enim ducimus possimus libero, impedit quo aperiam
-        iusto.
+        This website i use for learning Next.js in combination with some other
+        web technologies.
       </Paragraph>
-      <Heading order={2}>Heading 2 order</Heading>
-      <Paragraph>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem autem
-        odio, quaerat non eos beatae laudantium totam sequi repellat obcaecati
-        molestias quidem enim ducimus possimus libero, impedit quo aperiam
-        iusto.
-      </Paragraph>
-      <Heading order={3}>Heading 3 order</Heading>
-      <Paragraph>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem autem
-        odio, quaerat non eos beatae laudantium totam sequi repellat obcaecati
-        molestias quidem enim ducimus possimus libero, impedit quo aperiam
-        iusto.
-      </Paragraph>
-      <Heading order={4}>Heading 4 order</Heading>
-      <Paragraph>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem autem
-        odio, quaerat non eos beatae laudantium totam sequi repellat obcaecati
-        molestias quidem enim ducimus possimus libero, impedit quo aperiam
-        iusto.
-      </Paragraph>
-      <Heading order={5}>Heading 5 order</Heading>
-      <Paragraph>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem autem
-        odio, quaerat non eos beatae laudantium totam sequi repellat obcaecati
-        molestias quidem enim ducimus possimus libero, impedit quo aperiam
-        iusto.
-      </Paragraph>
-      <Heading order={6}>Heading 6 order</Heading>
-      <Paragraph>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem autem
-        odio, quaerat non eos beatae laudantium totam sequi repellat obcaecati
-        molestias quidem enim ducimus possimus libero, impedit quo aperiam
-        iusto.
-      </Paragraph>
+      <ul className='container grid flex-col flex-wrap gap-4 sm:grid-cols-2'>
+        {cardLinks.map((props) => (
+          <li key={props.href} className='*:h-full'>
+            <CardLink {...props} />
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
