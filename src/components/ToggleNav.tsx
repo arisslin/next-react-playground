@@ -1,27 +1,15 @@
 'use client';
 
-import { NavLink } from '@/types';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react';
-import { DarkModeToggle } from './DarkModeToggle';
 import { MenuButton } from './MenuButton';
+import { useState } from 'react';
+import { NavLink } from '@/types';
 
-export function TopNavigation({
+export function ToggleNav({
   links,
 }: Readonly<{ links: NavLink[] }>): JSX.Element {
-  return (
-    <nav className='border-b border-gray-200 bg-gray-50 text-gray-950 dark:border-gray-600 dark:bg-slate-800 dark:text-gray-50'>
-      <div className='mx-auto flex max-w-screen-lg flex-nowrap justify-between pr-4 lg:pl-4'>
-        <ToggleNav links={links} />
-        <DarkModeToggle />
-      </div>
-    </nav>
-  );
-}
-
-function ToggleNav({ links }: Readonly<{ links: NavLink[] }>): JSX.Element {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const openClassName = isOpen ? '' : 'hidden';
   return (
     <nav className='relative'>

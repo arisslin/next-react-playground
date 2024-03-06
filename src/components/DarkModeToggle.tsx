@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 import { ToggleSwitch } from './ToggleSwitch';
 import { DarkModeIcon } from './icons/DarkModeIcon';
