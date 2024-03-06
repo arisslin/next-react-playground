@@ -13,19 +13,28 @@ export function TopNavigation({
   return (
     <nav className='border-b border-gray-200 bg-gray-50 text-gray-950 dark:border-gray-600 dark:bg-slate-800 dark:text-gray-50'>
       <div className='mx-auto flex max-w-screen-lg flex-nowrap justify-between pr-4'>
-        <div className='relative'>
-          <MenuButton onClick={() => console.log('Click')} />
-          <ul className='absolute w-screen bg-gray-200'>
-            {links.map((link) => (
-              <Item key={link.href} href={link.href}>
-                {link.children}
-              </Item>
-            ))}
-          </ul>
-        </div>
+        <ToggleNav links={links} />
         <DarkModeToggle />
       </div>
     </nav>
+  );
+}
+
+function ToggleNav({ links }: Readonly<{ links: NavLink[] }>): JSX.Element {
+  const [isOpen, setIsOpen] = React.useState(false);
+  return (
+    <div className='relative'>
+      <MenuButton onClick={() => setIsOpen(!isOpen)} />
+      {isOpen ? (
+        <ul className='absolute w-screen bg-gray-200'>
+          {links.map((link) => (
+            <Item key={link.href} href={link.href}>
+              {link.children}
+            </Item>
+          ))}
+        </ul>
+      ) : null}
+    </div>
   );
 }
 
