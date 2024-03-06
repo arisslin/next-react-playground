@@ -12,15 +12,17 @@ export function TopNavigation({
 }: Readonly<{ links: NavLink[] }>): JSX.Element {
   return (
     <nav className='border-b border-gray-200 bg-gray-50 text-gray-950 dark:border-gray-600 dark:bg-slate-800 dark:text-gray-50'>
-      <div className='mx-auto flex max-w-screen-lg flex-nowrap justify-between px-4'>
-        <MenuButton onClick={() => console.log('Click')} />
-        <ul className='flex gap-4'>
-          {links.map((link) => (
-            <Item key={link.href} href={link.href}>
-              {link.children}
-            </Item>
-          ))}
-        </ul>
+      <div className='mx-auto flex max-w-screen-lg flex-nowrap justify-between pr-4'>
+        <div className='relative'>
+          <MenuButton onClick={() => console.log('Click')} />
+          <ul className='absolute w-screen bg-gray-200'>
+            {links.map((link) => (
+              <Item key={link.href} href={link.href}>
+                {link.children}
+              </Item>
+            ))}
+          </ul>
+        </div>
         <DarkModeToggle />
       </div>
     </nav>
@@ -29,16 +31,14 @@ export function TopNavigation({
 
 function Item({ href, children }: Readonly<NavLink>): JSX.Element {
   const pathname = usePathname();
-  const activeClassName =
-    pathname === href
-      ? 'text-sky-800 underline decoration-2 underline-offset-2 dark:text-sky-300'
-      : '';
+  const isActive = pathname === href;
+  const activeClassname = isActive ? 'bg-gray-300' : '';
 
   return (
     <li>
       <Link
         href={href}
-        className={`hover:text-sky-800 dark:hover:text-sky-300 ${activeClassName}`}
+        className={`block px-4 py-2 hover:bg-sky-200 ${activeClassname}`}
       >
         {children}
       </Link>
