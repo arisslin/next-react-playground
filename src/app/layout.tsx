@@ -21,13 +21,11 @@ const topNavLinks: NavLink[] = [
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} h-screen`}>
+      <body className={`${inter.className} bg-gray-50 dark:bg-slate-600`}>
         <header>
           <TopNavigation links={topNavLinks} />
         </header>
-        <main className='h-full bg-gray-50 text-gray-950 dark:bg-slate-600 dark:text-gray-50'>
-          {children}
-        </main>
+        <main className='text-gray-950 dark:text-gray-50'>{children}</main>
       </body>
     </html>
   );
