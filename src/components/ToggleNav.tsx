@@ -15,7 +15,7 @@ export function ToggleNav({
     <nav className='relative'>
       <MenuButton onClick={() => setIsOpen(!isOpen)} className='lg:hidden' />
       <ul
-        className={`absolute left-0 w-screen bg-gray-200 dark:bg-gray-500 lg:static lg:flex lg:w-fit lg:bg-transparent ${openClassName}`}
+        className={`absolute left-0 w-screen bg-gray-200 dark:bg-gray-500 dark:bg-transparent lg:static lg:flex lg:w-fit dark:lg:bg-transparent ${openClassName}`}
       >
         {links.map((link) => (
           <Item key={link.href} href={link.href}>
