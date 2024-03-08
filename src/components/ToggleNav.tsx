@@ -15,7 +15,7 @@ export function ToggleNav({
     <nav className='relative'>
       <MenuButton onClick={() => setIsOpen(!isOpen)} className='lg:hidden' />
       <ul
-        className={`absolute left-0 w-screen bg-gray-200 lg:static lg:flex lg:w-fit lg:bg-transparent ${openClassName}`}
+        className={`absolute left-0 w-screen bg-gray-200 dark:bg-gray-500 lg:static lg:flex lg:w-fit lg:bg-transparent ${openClassName}`}
       >
         {links.map((link) => (
           <Item key={link.href} href={link.href}>
@@ -30,13 +30,13 @@ export function ToggleNav({
 function Item({ href, children }: Readonly<NavLink>): JSX.Element {
   const pathname = usePathname();
   const isActive = pathname === href;
-  const activeClassname = isActive ? 'bg-gray-300' : '';
+  const activeClassname = isActive ? 'bg-gray-300 dark:bg-gray-400' : '';
 
   return (
     <li>
       <Link
         href={href}
-        className={`block px-4 py-2 hover:bg-sky-200 ${activeClassname}`}
+        className={`block px-4 py-2 hover:bg-sky-200 dark:hover:bg-sky-500 ${activeClassname}`}
       >
         {children}
       </Link>
