@@ -1,4 +1,4 @@
-import { TopNavigation } from '@/components/TopNavigation';
+import { Header } from '@/components/Header';
 import { NavLink } from '@/types';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -22,9 +22,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='en'>
       <body className={`${inter.className} bg-gray-50 dark:bg-slate-600`}>
-        <header>
-          <TopNavigation links={topNavLinks} />
-        </header>
+        <Header links={topNavLinks} />
         <main className='text-gray-950 dark:text-gray-50'>{children}</main>
       </body>
     </html>
