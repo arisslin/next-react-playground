@@ -18,7 +18,11 @@ export function ToggleNav({
         className={`absolute left-0 w-screen bg-gray-200 dark:bg-gray-500 lg:static lg:flex lg:w-fit lg:bg-transparent dark:lg:bg-transparent ${openClassName}`}
       >
         {links.map((link) => (
-          <Item key={link.href} href={link.href}>
+          <Item
+            key={link.href}
+            href={link.href}
+            onClick={() => setIsOpen(false)}
+          >
             {link.children}
           </Item>
         ))}
@@ -27,7 +31,9 @@ export function ToggleNav({
   );
 }
 
-function Item({ href, children }: Readonly<NavLink>): JSX.Element {
+type ItemProps = { onClick?: () => void } & NavLink;
+
+function Item({ href, children, onClick }: Readonly<ItemProps>): JSX.Element {
   const pathname = usePathname();
   const isActive = pathname === href;
   const activeClassname = isActive ? 'bg-gray-300 dark:bg-gray-400' : '';
@@ -37,6 +43,7 @@ function Item({ href, children }: Readonly<NavLink>): JSX.Element {
       <Link
         href={href}
         className={`block px-4 py-2 hover:bg-sky-200 dark:hover:bg-sky-500 ${activeClassname}`}
+        onClick={onClick}
       >
         {children}
       </Link>
