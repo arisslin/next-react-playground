@@ -4,14 +4,14 @@ import { CardLink, CardLinkProps } from '@/components/CardLink';
 
 const cardLinks: CardLinkProps[] = [
   {
-    href: '/next',
-    title: 'Next.js',
-    subtext: 'Here you find some Next.js examples.',
-  },
-  {
     href: '/react',
     title: 'React.js',
     subtext: 'Here you find some React.js examples.',
+  },
+  {
+    href: '/next',
+    title: 'Next.js',
+    subtext: 'Here you find some Next.js examples.',
   },
 ];
 

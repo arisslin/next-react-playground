@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 
 const topNavLinks: NavLink[] = [
   { href: '/', children: 'Home' },
-  { href: '/next', children: 'Next' },
   { href: '/react', children: 'React' },
+  { href: '/next', children: 'Next' },
 ];
 
 export default function RootLayout({ children }: RootLayoutProps) {
