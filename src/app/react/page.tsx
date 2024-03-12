@@ -27,7 +27,9 @@ export default function ReactPage(): JSX.Element {
         Following Hooks are used to manage the state of a component:
       </Paragraph>
       <List>
-        <List.Item>useState</List.Item>
+        <List.Item>
+          <TextLink href='/react/useState'>useState</TextLink>
+        </List.Item>
         <List.Item>useReducer</List.Item>
       </List>
     </>
