@@ -11,9 +11,7 @@ export function CardLink({ href, title, subtext }: Readonly<CardLinkProps>) {
       <h4 className='text-lg font-bold text-sky-700 group-hover:text-sky-300 dark:text-sky-200'>
         {title}
       </h4>
-      {subtext ? (
-        <p className='font-light group-hover:text-gray-50'>{subtext}</p>
-      ) : null}
+      {subtext ? <p className='group-hover:text-gray-50'>{subtext}</p> : null}
     </Link>
   );
 }
