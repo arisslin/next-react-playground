@@ -2,7 +2,6 @@ import Heading from '@/components/Heading';
 import { List } from '@/components/List';
 import Paragraph from '@/components/Paragraph';
 import { TextLink } from '@/components/links/TextLink';
-import Head from 'next/head';
 
 export default function ReactPage(): JSX.Element {
   return (
