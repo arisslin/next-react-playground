@@ -3,16 +3,19 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { MenuButton } from './MenuButton';
-import { useState } from 'react';
+import { useOutsideClick } from '@/utils/hooks';
 import { NavLink } from '@/types';
+import { useState } from 'react';
 
 export function ToggleNav({
   links,
 }: Readonly<{ links: NavLink[] }>): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
+  const ref = useOutsideClick(() => setIsOpen(false));
   const openClassName = isOpen ? '' : 'hidden';
+
   return (
-    <nav className='relative'>
+    <nav className='relative' ref={ref}>
       <MenuButton onClick={() => setIsOpen(!isOpen)} className='lg:hidden' />
       <ul
         className={`absolute left-0 w-screen bg-gray-200 dark:bg-gray-500 lg:static lg:flex lg:w-fit lg:bg-transparent dark:lg:bg-transparent ${openClassName}`}
