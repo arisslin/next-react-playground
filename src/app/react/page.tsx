@@ -9,7 +9,7 @@ export default function ReactPage(): JSX.Element {
     <>
       <Heading order={1}>React</Heading>
       <Paragraph>
-        Here you can find some examples of react.js. They are based on the
+        Here you can find some examples of React. They are based on the
         reference on the official{' '}
         <TextLink href='https://react.dev/'>React.js website</TextLink>.
       </Paragraph>
