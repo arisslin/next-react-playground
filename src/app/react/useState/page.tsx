@@ -4,7 +4,7 @@ import { Button } from '@/components/Button';
 import Heading from '@/components/Heading';
 import { useState } from 'react';
 
-export default function UseStatePage() {
+export default function UseStatePage(): JSX.Element {
   return (
     <>
       <Heading order={1}>useState</Heading>
@@ -30,11 +30,11 @@ function Counter(): JSX.Element {
     </div>
   );
 
-  function decrement() {
+  function decrement(): void {
     setCount(count - 1);
   }
 
-  function increment() {
+  function increment(): void {
     setCount(count + 1);
   }
 }
