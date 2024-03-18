@@ -3,6 +3,22 @@
 import { Button } from '@/components/Button';
 import Heading from '@/components/Heading';
 import { useState } from 'react';
+import { CodeBlock } from '@/components/codeblock/TypeScriptCodeBlock';
+
+const code = `function Counter(): JSX.Element {
+  const [count, setCount] = useState<number>(0);
+
+  return <Button onClick={increment}>+</Button>;
+
+  function decrement(): void {
+    setCount(count - 1);
+  }
+
+  function increment(): void {
+    setCount(count + 1);
+  }
+}
+`;
 
 export default function UseStatePage(): JSX.Element {
   return (
@@ -11,6 +27,7 @@ export default function UseStatePage(): JSX.Element {
       <section className='container'>
         <Counter />
       </section>
+      <CodeBlock>{code}</CodeBlock>
     </>
   );
 }
