@@ -3,7 +3,7 @@ type HeadingProps = {
   children: React.ReactNode;
 };
 
-export default function Heading({
+export function Heading({
   order,
   children,
 }: Readonly<HeadingProps>): JSX.Element | null {
