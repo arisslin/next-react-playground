@@ -6,7 +6,7 @@ import './globals.css';
 
 type RootLayoutProps = Readonly<{ children: React.ReactNode }>;
 
-const inter = Inter({ subsets: ['latin'] });
+export const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Next React Playground',
