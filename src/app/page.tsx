@@ -1,4 +1,4 @@
-import { Heading } from '@/components/Heading';
+import { Heading } from '@/components/heading/Heading';
 import Paragraph from '@/components/Paragraph';
 import { CardLink, CardLinkProps } from '@/components/CardLink';
 
