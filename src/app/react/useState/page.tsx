@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/components/Button';
-import Heading from '@/components/Heading';
+import { Heading } from '@/components/heading/Heading';
 import { useState } from 'react';
 import { CodeBlock } from '@/components/codeblock/TypeScriptCodeBlock';
 import Paragraph from '@/components/Paragraph';
