@@ -23,7 +23,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang='en'>
       <body className={`${inter.className}`}>
         <Header links={topNavLinks} />
-        <main className='text-gray-950 dark:text-gray-50'>{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );
