@@ -1,4 +1,4 @@
-import { Heading } from '@/components/Heading';
+import { Heading } from '@/components/heading/Heading';
 import { List } from '@/components/List';
 import Paragraph from '@/components/Paragraph';
 import { TextLink } from '@/components/links/TextLink';
