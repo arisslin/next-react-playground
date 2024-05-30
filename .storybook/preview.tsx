@@ -4,6 +4,7 @@ import '../src/app/globals.css';
 import { inter } from '../src/app/layout';
 
 const preview: Preview = {
+  tags: ['autodocs'],
   decorators: [
     (Story) => (
       <div className={`${inter.className}`}>
