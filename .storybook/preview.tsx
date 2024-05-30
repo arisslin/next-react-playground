@@ -12,6 +12,11 @@ const preview: Preview = {
       </div>
     ),
   ],
+  parameters: {
+    docs: {
+      toc: true,
+    },
+  },
 };
 
 export default preview;
