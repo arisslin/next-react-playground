@@ -7,6 +7,30 @@ const meta: Meta<typeof Heading> = {
   args: {
     children: 'Heading',
   },
+  argTypes: {
+    children: {
+      description: 'The text content of the heading.',
+      type: {
+        required: true,
+        name: 'other',
+        value: 'React.ReactNode',
+      },
+      table: {
+        type: { summary: 'React.ReactNode' },
+      },
+    },
+    order: {
+      description: 'The heading level.',
+      table: {
+        type: { summary: 'number' },
+      },
+      type: {
+        required: true,
+        name: 'enum',
+        value: [1, 2, 3, 4, 5, 6],
+      },
+    },
+  },
 };
 
 export default meta;
