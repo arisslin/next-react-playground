@@ -1,10 +1,10 @@
-type ButtonProps = {
+type ButtonProps = Readonly<{
   children: React.ReactNode;
   onClick?: () => void;
   disabled?: boolean;
-};
+}>;
 
-export function Button({ children, onClick, disabled }: Readonly<ButtonProps>) {
+export function Button({ children, onClick, disabled }: ButtonProps) {
   return (
     <button
       onClick={onClick}
