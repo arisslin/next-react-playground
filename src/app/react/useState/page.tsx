@@ -3,7 +3,7 @@
 import { Button } from '@/components/button/Button';
 import { Heading } from '@/components/heading/Heading';
 import { useState } from 'react';
-import { CodeBlock } from '@/components/codeblock/TypeScriptCodeBlock';
+import { TypeScriptCodeBlock } from '@/components/codeblock/TypeScriptCodeBlock';
 import Paragraph from '@/components/Paragraph';
 import { TextLink } from '@/components/links/TextLink';
 import { InlineCode } from '@/components/InlineCode';
@@ -50,14 +50,14 @@ export default function UseStatePage(): JSX.Element {
         With the <b>useState</b> Hook a state variable can get added to a
         component.
       </Paragraph>
-      <CodeBlock>{codeUseState}</CodeBlock>
+      <TypeScriptCodeBlock>{codeUseState}</TypeScriptCodeBlock>
       <Heading order={2}>Reference</Heading>
       <Paragraph>
         The hook should get called at the top level of a component. With array
         destructuring the state variables get created like{' '}
         <InlineCode>[state, setState]</InlineCode>.
       </Paragraph>
-      <CodeBlock>{codeParameters}</CodeBlock>
+      <TypeScriptCodeBlock>{codeParameters}</TypeScriptCodeBlock>
       <Heading order={3}>Parameters</Heading>
       <Paragraph>
         It takes an <b>initial state</b> as parameter. This can take a value of
@@ -120,7 +120,7 @@ export default function UseStatePage(): JSX.Element {
       <section className='container'>
         <Counter />
       </section>
-      <CodeBlock>{codeCounter}</CodeBlock>
+      <TypeScriptCodeBlock>{codeCounter}</TypeScriptCodeBlock>
     </>
   );
 }
