@@ -6,7 +6,7 @@ import './globals.css';
 
 type RootLayoutProps = Readonly<{ children: React.ReactNode }>;
 
-const inter = Inter({ subsets: ['latin'] });
+export const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Next React Playground',
@@ -21,9 +21,9 @@ const topNavLinks: NavLink[] = [
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} bg-gray-50 dark:bg-slate-600`}>
+      <body className={`${inter.className}`}>
         <Header links={topNavLinks} />
-        <main className='text-gray-950 dark:text-gray-50'>{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );

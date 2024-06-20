@@ -4,12 +4,13 @@ type ListProps = {
 };
 
 function List({ children, ordered }: Readonly<ListProps>): JSX.Element {
+  const commonClassName =
+    'container my-4 list-inside text-gray-950 dark:text-gray-50';
+
   if (ordered) {
-    return (
-      <ol className='container my-4 list-inside list-decimal'>{children}</ol>
-    );
+    return <ol className={`${commonClassName} list-decimal`}>{children}</ol>;
   }
-  return <ul className='container my-4 list-inside list-disc'>{children}</ul>;
+  return <ul className={`${commonClassName} list-disc`}>{children}</ul>;
 }
 
 type ItemProps = {

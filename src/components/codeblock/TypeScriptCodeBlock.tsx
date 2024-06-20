@@ -11,7 +11,9 @@ type CodeBlockProps = {
   children: string;
 };
 
-export function CodeBlock({ children }: Readonly<CodeBlockProps>): JSX.Element {
+export function TypeScriptCodeBlock({
+  children,
+}: Readonly<CodeBlockProps>): JSX.Element {
   const codeBlockRef = useRef(null);
 
   useEffect(() => {

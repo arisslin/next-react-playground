@@ -3,11 +3,11 @@ type HeadingProps = {
   children: React.ReactNode;
 };
 
-export default function Heading({
+export function Heading({
   order,
   children,
 }: Readonly<HeadingProps>): JSX.Element | null {
-  const commonClassName = 'container font-bold';
+  const commonClassName = 'container font-bold text-gray-950 dark:text-gray-50';
 
   const headings = {
     1: (
