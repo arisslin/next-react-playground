@@ -1,6 +1,6 @@
 import { Heading } from '@/components/heading/Heading';
 import Paragraph from '@/components/Paragraph';
-import { CardLink, CardLinkProps } from '@/components/CardLink';
+import { CardLink, CardLinkProps } from '@/components/cardLink/CardLink';
 
 const cardLinks: CardLinkProps[] = [
   {

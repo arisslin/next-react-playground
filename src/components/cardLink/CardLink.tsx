@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Paragraph from './Paragraph';
+import Paragraph from '@/components/Paragraph';
 
 export type CardLinkProps = { href: string; title: string; subtext?: string };
 
