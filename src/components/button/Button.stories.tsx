@@ -40,6 +40,7 @@ const meta: Meta<typeof Button> = {
       },
     },
   },
+  parameters: { layout: 'centered' },
 };
 
 export default meta;
