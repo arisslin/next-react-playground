@@ -13,6 +13,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "jest ",
+    "test:coverage": "npm run test -- --coverage=true",
     "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
