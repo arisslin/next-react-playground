@@ -38,6 +38,7 @@ const meta: Meta<typeof TextLink> = {
       },
     },
   },
+  parameters: { layout: 'centered' },
 };
 
 export default meta;
